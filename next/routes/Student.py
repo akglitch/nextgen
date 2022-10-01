@@ -8,4 +8,5 @@ student_router = APIRouter()
 
 @student_router.post("items/")
 async def post(student : Student) -> dict:
-    return {"student"}
+    student.name.capitalize()
+    return student
