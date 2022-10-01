@@ -4,9 +4,10 @@ from  ..models.StudentModel import Student
 
 
 
+
+
 student_router = APIRouter()
 
-@student_router.post("items/")
-async def post(student : Student) -> dict:
-    student.name.capitalize()
+@student_router.post("/post_student", status_code=status.HTTP_201_CREATED)
+async def post_message(student: Student):
     return student
