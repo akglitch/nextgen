@@ -5,18 +5,16 @@ from pydantic import BaseModel,EmailStr
 
 
 class Student(BaseModel):
-    id : int
     name : str
-    task : str
-    descriptioin: str
+    age : int
+    email: EmailStr
 
     class Config:
         schema_extra ={
             "example":{
-              "id":1,
                 "name":"kacey",
-                "task": "singing",
-                "description":"i usally sing jazz" ,
+                "age":8,
+                "email":"kayteezy@gmail.com" ,
             }
         }
 

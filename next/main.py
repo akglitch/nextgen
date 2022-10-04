@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from  .routes.Student import student_router
+from  .routes.Student_route import student_router
 
 import uvicorn
 
