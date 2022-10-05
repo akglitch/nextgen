@@ -25,10 +25,10 @@ async def get_students():
     students = students_serializer(collection_name.find())
     return students
 
-
+# retrieve by id
 @student_router.get("/{id}")
-async def get_student(id:str):
-    return students_serializer(collection_name.find_one({"_id": ObjectId(id)}))
+async def get_student(id: str):
+    return students_serializer(collection_name.find({"_id": ObjectId(id)}))
 
 
 
