@@ -8,3 +8,4 @@ app = FastAPI()
 # Register routes
 
 app.include_router(student_router)
+
